@@ -136,4 +136,24 @@ void Game::ComposeFrame()
 	gfx.PutPixel(xoff, yoff + 3, 255, 255, 255);
 	gfx.PutPixel(xoff, yoff + 4, 255, 255, 255);
 	gfx.PutPixel(xoff, yoff + 5, 255, 255, 255);
+
+	int rombx = 90;
+	int romby = 68;
+	gfx.PutPixel(rombx + 0, romby + 0, 60, 255, 140);
+	gfx.PutPixel(rombx + 1, romby + 1, 60, 255, 140);
+	gfx.PutPixel(rombx + 1, romby - 1, 60, 255, 140);
+	gfx.PutPixel(rombx + 2, romby + 2, 60, 255, 140);
+	gfx.PutPixel(rombx + 2, romby - 2, 60, 255, 140);
+	gfx.PutPixel(rombx + 3, romby + 3, 60, 255, 140);
+	gfx.PutPixel(rombx + 3, romby - 3, 60, 255, 140);
+	gfx.PutPixel(rombx + 4 ,romby + 4, 60, 255, 140);
+	gfx.PutPixel(rombx + 4, romby - 4, 60, 255, 140);
+	gfx.PutPixel(rombx + 5, romby + 3, 60, 255, 140);
+	gfx.PutPixel(rombx + 5, romby - 3, 60, 255, 140);
+	gfx.PutPixel(rombx + 6, romby + 2, 60, 255, 140);
+	gfx.PutPixel(rombx + 6, romby - 2, 60, 255, 140);
+	gfx.PutPixel(rombx + 7, romby + 1, 60, 255, 140);
+	gfx.PutPixel(rombx + 7, romby - 1, 60, 255, 140);
+	gfx.PutPixel(rombx + 8, romby + 0, 60, 255, 140);
+
 }
