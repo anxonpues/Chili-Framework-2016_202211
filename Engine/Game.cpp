@@ -68,4 +68,19 @@ void Game::ComposeFrame()
 	gfx.PutPixel(404 + x, 295, 255, 25, 255);
 	gfx.PutPixel(405 + x, 295, 255, 25, 255);
 	gfx.PutPixel(406 + x, 295, 255, 25, 255);
+
+	x = 56;
+	int y = -20;
+	gfx.PutPixel(396 + x, 305+y, 255, 250, 5);
+	gfx.PutPixel(397 + x, 305+y, 255, 250, 5);
+	gfx.PutPixel(398 + x, 305+y, 255, 250, 5);
+	gfx.PutPixel(399 + x, 305+y, 255, 250, 5);
+	gfx.PutPixel(400 + x, 305+y, 255, 250, 5);
+	gfx.PutPixel(401 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(402 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(403 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(404 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(405 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(406 + x, 295+y, 255, 250, 5);
+	gfx.PutPixel(395 + x, 305+y, 255, 250, 5);
 }
