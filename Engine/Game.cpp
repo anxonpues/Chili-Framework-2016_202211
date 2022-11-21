@@ -159,33 +159,47 @@ void Game::ComposeFrame()
 
 	int cornx = 190;
 	int corny = 168;
+	// upper left horizontal
 	gfx.PutPixel(cornx + 0, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 1, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 2, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 3, corny + 0, 160, 255, 100);
+	// upper right horizontal
 	gfx.PutPixel(cornx + 6, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 7, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 8, corny + 0, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 0, 160, 255, 100);
+	// lower left horizontal
 	gfx.PutPixel(cornx + 0, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 1, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 2, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 3, corny + 9, 160, 255, 100);
+	// lower right horizontal
 	gfx.PutPixel(cornx + 6, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 7, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 8, corny + 9, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 9, 160, 255, 100);
+	// upper left vertical
 	gfx.PutPixel(cornx + 0, corny + 1, 160, 255, 100);
 	gfx.PutPixel(cornx + 0, corny + 2, 160, 255, 100);
 	gfx.PutPixel(cornx + 0, corny + 3, 160, 255, 100);
+	// lower left vertical
 	gfx.PutPixel(cornx + 0, corny + 6, 160, 255, 100);
 	gfx.PutPixel(cornx + 0, corny + 7, 160, 255, 100);
 	gfx.PutPixel(cornx + 0, corny + 8, 160, 255, 100);
+	// upper right vertical
 	gfx.PutPixel(cornx + 9, corny + 1, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 2, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 3, 160, 255, 100);
+	// lower right vertical
 	gfx.PutPixel(cornx + 9, corny + 6, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 7, 160, 255, 100);
 	gfx.PutPixel(cornx + 9, corny + 8, 160, 255, 100);
+
+	gfx.PutPixel(cornx + 4, corny + 4, 255, 255,  40);
+	gfx.PutPixel(cornx + 4, corny + 5, 255, 255,  40);
+	gfx.PutPixel(cornx + 5, corny + 4, 255, 255,  40);
+	gfx.PutPixel(cornx + 5, corny + 5, 255, 255,  40);
+
 
 }
