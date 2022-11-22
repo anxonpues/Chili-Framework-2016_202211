@@ -42,20 +42,72 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	gfx.PutPixel( 395,300,255,255,255 );
-	gfx.PutPixel( 396,300,255,255,255 );
-	gfx.PutPixel( 397,300,255,255,255 );
-	gfx.PutPixel( 403,300,255,255,255 );
-	gfx.PutPixel( 404,300,255,255,255 );
-	gfx.PutPixel( 405,300,255,255,255 );
-	gfx.PutPixel( 400,295,255,255,255 );
-	gfx.PutPixel( 400,296,255,255,255 );
-	gfx.PutPixel( 400,297,255,255,255 );
-	gfx.PutPixel( 400,303,255,255,255 );
-	gfx.PutPixel( 400,304,255,255,255 );
-	gfx.PutPixel( 400,305,255,255,255 );
+	int x = 400;
+	int y = 300;
+	int dx = 0;
+	int dy = 0;
+	int r = 0;
+	int g = 0;
+	int b = 0;
+	int frame = 1;
 
-	int x = 16;
+	if (wnd.kbd.KeyIsPressed(VK_DOWN))
+		dy = +30;
+	if (wnd.kbd.KeyIsPressed(VK_UP))
+		dy = -30;
+	if (wnd.kbd.KeyIsPressed(VK_LEFT))
+		dx = -30;
+	if (wnd.kbd.KeyIsPressed(VK_RIGHT))
+		dx = +30;
+	if (wnd.kbd.KeyIsPressed(VK_CONTROL))
+		r = 255;
+	if (wnd.kbd.KeyIsPressed(VK_SHIFT))
+		g = 255;
+	if (wnd.kbd.KeyIsPressed(VK_MENU))	// lokks like this code doesn't work
+		b = 255;
+	if (wnd.kbd.KeyIsPressed(0x12))	// with hexadecimal doesn't work neither
+		b = 255;
+	if (wnd.kbd.KeyIsPressed(VK_SPACE))
+		frame *= (-1);
+
+	if (frame == 1)
+	{
+		gfx.PutPixel(x + dx - 5, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx - 4, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx - 3, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx + 3, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx + 4, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx + 5, y + dy +0, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy -5, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy -4, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy -3, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy +3, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy +4, r, g, b);
+		gfx.PutPixel(x + dx + 0, y + dy +5, r, g, b);
+	}
+	
+	if (frame == -1)
+	{
+		gfx.PutPixel(x + dx + 0, y  + dy + 0, r, g, b);
+		gfx.PutPixel(x + dx + 1, y  + dy + 1, r, g, b);
+		gfx.PutPixel(x + dx + 1, y  + dy - 1, r, g, b);
+		gfx.PutPixel(x + dx + 2, y  + dy + 2, r, g, b);
+		gfx.PutPixel(x + dx + 2, y  + dy - 2, r, g, b);
+		gfx.PutPixel(x + dx + 3, y  + dy + 3, r, g, b);
+		gfx.PutPixel(x + dx + 3, y  + dy - 3, r, g, b);
+		gfx.PutPixel(x + dx + 4, y  + dy + 4, r, g, b);
+		gfx.PutPixel(x + dx + 4, y  + dy - 4, r, g, b);
+		gfx.PutPixel(x + dx + 5, y  + dy + 3, r, g, b);
+		gfx.PutPixel(x + dx + 5, y  + dy - 3, r, g, b);
+		gfx.PutPixel(x + dx + 6, y  + dy + 2, r, g, b);
+		gfx.PutPixel(x + dx + 6, y  + dy - 2, r, g, b);
+		gfx.PutPixel(x + dx + 7, y  + dy + 1, r, g, b);
+		gfx.PutPixel(x + dx + 7, y  + dy - 1, r, g, b);
+		gfx.PutPixel(x + dx + 8, y  + dy + 0, r, g, b);
+	}
+
+	/*
+	x = 16;
 	gfx.PutPixel(395 + x, 305, 255, 25, 255);
 	gfx.PutPixel(396 + x, 305, 255, 25, 255);
 	gfx.PutPixel(397 + x, 305, 255, 25, 255);
@@ -70,7 +122,7 @@ void Game::ComposeFrame()
 	gfx.PutPixel(406 + x, 295, 255, 25, 255);
 
 	x = 56;
-	int y = -20;
+	y = -20;
 	gfx.PutPixel(396 + x, 305 + y, 255, 250, 5);
 	gfx.PutPixel(397 + x, 305 + y, 255, 250, 5);
 	gfx.PutPixel(398 + x, 305 + y, 255, 250, 5);
@@ -83,7 +135,7 @@ void Game::ComposeFrame()
 	gfx.PutPixel(405 + x, 295 + y, 255, 250, 5);
 	gfx.PutPixel(406 + x, 295 + y, 255, 250, 5);
 	gfx.PutPixel(395 + x, 305 + y, 255, 250, 5);
-							    
+	*/						    
 	int xoff = 655;
 	int yoff = 117;
 	gfx.PutPixel(xoff - 5, yoff    , 255, 255, 255);
@@ -156,7 +208,7 @@ void Game::ComposeFrame()
 	gfx.PutPixel(rombx + 7, romby - 1, 60, 255, 140);
 	gfx.PutPixel(rombx + 8, romby + 0, 60, 255, 140);
 
-	bool cond = wnd.kbd.KeyIsPressed(VK_DOWN);
+	const bool cond = wnd.kbd.KeyIsPressed(VK_DOWN);
 
 	if (cond)
 	{
