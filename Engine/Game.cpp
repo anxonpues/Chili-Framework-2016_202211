@@ -63,9 +63,11 @@ void Game::ComposeFrame()
 		r = 255;
 	if (wnd.kbd.KeyIsPressed(VK_SHIFT))
 		g = 255;
-	if (wnd.kbd.KeyIsPressed(VK_MENU))	// looks like this code doesn't work
-		b = 255;
-	if (wnd.kbd.KeyIsPressed(0x12))	// with hexadecimal doesn't work neither
+	/*if (wnd.kbd.KeyIsPressed(VK_MENU))	// looks like this code doesn't work
+		b = 255; */
+	/*if (wnd.kbd.KeyIsPressed(0x12))	// with hexadecimal doesn't work neither
+		b = 255;  */
+	if (wnd.kbd.KeyIsPressed(VK_RETURN))	
 		b = 255;
 	if (wnd.kbd.KeyIsPressed(VK_SPACE))
 		frame *= (-1);
